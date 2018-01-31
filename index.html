@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>Savings Calculator</title>      
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <div class='container-fluid'>
+    <div id="calculator-form" class="row">
+      <div class='col col-md-12'>
+        <h2>How much could you save?</h2>
+      </div>
+      <fieldset class="radios col col-md-4">
+        <p>Significant fuel savings can be achieved by switching to Natural gas. Use the calculator below to discover how much a truck could save by switching to ZHRO.</p>
+      <div class='form-group'>
+        <div class="form-title">Type of Fuel: </div>
+        <ul id="fuel-type">
+          <li>
+            <label for="CNG" class="checked">
+              <input type="radio" name="fuel" value="CNG" id="CNG" checked="checked" />
+              CNG
+            </label>
+          </li>
+          <li>
+            <label for="LNG">
+              <input type="radio" name="fuel" value="LNG" id="LNG" />
+              LNG
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class='form-group'>
+        <div class="form-title">
+          Preferred Measurement:
+        </div>
+        <ul id="measurement">
+          <li>
+            <label for="DGE" class="checked">
+              <input type="radio" name="measurement" value="DGE" id="DGE" checked="checked" />
+              DGE
+            </label>
+          </li>
+          <li>
+            <label for="MMBTU">
+              <input type="radio" name="measurement" value="MMBTU" id="MMBTU" />
+              MMBTU
+            </label>
+          </li>
+          <li>
+            <label for="GGE">
+              <input type="radio" name="measurement" value="GGE" id="GGE" />
+              GGE
+            </label>
+          </li>
+        </ul>
+      </div>
+      <small>
+        <p>Use your mouse to move the slider, or place mouse on the slider and use your arrow keys.</p>
+      </small>
+      </fieldset>
+
+      <fieldset class="sliders col col-md-4">
+        <div class='form-group'>
+          <div class="form-title">Average Miles Per Year:</div>
+          <div id="average-miles-slider"></div>
+          <input type="text" class="form-control" id="average-miles" readonly="readonly" />
+        </div>
+        <div class='form-group'>
+          <div class="form-title">Average Diesel MPG:</div>
+          <div id="average-mpg-slider"></div>
+          <input type="text" class="form-control" id="average-mpg" readonly="readonly" />
+        </div>
+        <div class='form-group'>
+          <div class="form-title">Diesel Pump Cost:</div>
+          <div id="diesel-cost-slider"></div>
+          <input type="text" class="form-control" id="diesel-cost" readonly="readonly" />
+        </div>
+        <div class='form-group'>
+          <div class="form-title">Natural Gas Cost:</div>
+          <div id="natural-gas-cost-slider"></div>
+          <input type="text" class="form-control" id="natural-gas-cost" readonly="readonly" />
+        </div>
+      </fieldset>
+      <fieldset class="totals col col-md-4">
+        <div class='form-group'>
+          <div class="form-title">Total Diesel Gallons Consumed*</div>
+          <div class="wrapper diesel-consumed">
+            <input type="text" class="form-control updating" id="diesel-consumed" readonly="readonly" />
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class="form-title">Diesel cost</div>
+          <div class="wrapper diesel-cost-total">
+            <input type="text" class="form-control updating" id="diesel-cost-total" readonly="readonly" />
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class="form-title">CNG cost</div>
+          <div class="wrapper cne-cost-total">
+            <input type="text" class="form-control updating" id="cne-cost-total" readonly="readonly" />
+          </div>
+        </div>
+        <div class='form-group'>
+          <div class="form-title savings">Savings</div>
+          <input type="text" class="form-control updating" id="savings" readonly="readonly" />
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="js/jquery.formatCurrency-1.4.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

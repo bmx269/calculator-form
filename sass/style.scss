@@ -1,0 +1,201 @@
+body {
+  background: #026ff7;
+  color: #fff;
+  margin: 0;
+}
+
+
+#calculator-form{
+  fieldset {
+    border: none;
+  }
+
+  .form-title {
+    font-size: 14px;
+    line-height: 1.2rem;
+    clear: both;
+    display: block;
+    text-transform: uppercase;
+  }
+
+
+  .ui-slider-horizontal {
+    height: 30px;
+    border: none;
+    border-radius: 12px;
+    background: transparent url("../img/slider-gray.png") left center repeat-x;
+    margin: 2px 0;
+  }
+  .ui-slider-horizontal .ui-slider-handle {
+    margin-left: -12px;
+    top: 0;
+  }
+  .ui-state-default,
+  .ui-widget-content .ui-state-default,
+  .ui-widget-header .ui-state-default {
+    border: none;
+    background: transparent url("../img/slider-handle.png") center center repeat-x scroll ;
+    font-weight: 400;
+  }
+  .ui-state-hover,
+  .ui-widget-content .ui-state-hover,
+  .ui-widget-header .ui-state-hover,
+  .ui-state-focus,
+  .ui-widget-content .ui-state-focus,
+  .ui-widget-header .ui-state-focus {
+    border: none;
+    background: transparent url("../img/slider-handle.png") center center repeat-x scroll ;
+    font-weight: 400;
+  }
+  .ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 24px;
+    height: 30px;
+    cursor: default;
+  }
+
+  .ui-widget-header {
+    background: transparent url("../img/slider-green.png") left center repeat-x;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  #fuel-type{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 5px solid #f6f7fb;
+    border-radius: 7px;
+    overflow: hidden;
+
+    li{
+      display: block;
+      float: left;
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      width: 50%;
+      //height: 55px;
+    }
+    label{
+      padding: 10px 5px 10px 30px;
+      margin: 0;
+      background-color: transparent;
+      display: block;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+
+      &[for='CNG']{
+        background:transparent url("../img/sprite.png") no-repeat scroll 55px 13px;
+      }
+      &[for='LNG']{
+        background:transparent url("../img/sprite.png") no-repeat scroll 55px -68px;
+      }
+      &.checked{
+        background-color: #7dc742;
+        color: #fff;
+      }
+    }
+    input{
+      display: none;
+    }
+  }
+
+  #measurement{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    label{
+      background:transparent url("../img/sprite.png") no-repeat scroll 0px -193px;
+      padding: 0px 10px 0px 20px;
+      display: block;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+
+      &.checked{
+        background:transparent url("../img/sprite.png") no-repeat scroll 0px -167px;
+        color: #f6f7fb;
+      }
+      &.disabled{
+        background:#026ff7;
+        color: #1c8dff;
+      }
+    }
+    input{
+      display: none;
+    }
+  }
+
+  .totals,
+  .sliders {
+
+    label{
+      font-weight: 600;
+      padding: 10px 0 8px;
+      clear: both;
+      display: block;
+    }
+    .ui-slider{
+      position: relative;
+      display: block;
+    }
+    input{
+      display: block;
+      background: transparent;
+      margin: 0 0 10px;
+      border: 2px solid #0060d7;
+      text-align: right;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      height: auto;
+      padding: 3px 10px;
+    }
+  } //.sliders
+
+  .totals{
+
+    .wrapper{
+      display: block;
+      height: 35px;
+      padding-left: 25px;
+
+      &.diesel-consumed{
+        background:transparent url("../img/sprite.png") no-repeat scroll 0px -245px;
+      }
+      &.diesel-cost-total,
+      &.cne-cost-total{
+        background:transparent url("../img/sprite.png") no-repeat scroll 0px -295px;
+      }
+    }
+
+    input{
+      width: 100%;
+
+      &#savings{
+        background: #7dc742;
+        border: 1px solid #7dc742;
+        text-shadow: 2px 2px 1px #72af36;
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        width: 100%;
+      }
+    }
+  }
+} //#calculator-form
+

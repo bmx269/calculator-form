@@ -1,0 +1,205 @@
+body {
+  background: #026ff7;
+  color: #fff;
+  margin: 0;
+}
+
+#calculator-form fieldset {
+  border: none;
+}
+
+#calculator-form .form-title {
+  font-size: 14px;
+  line-height: 19.2px;
+  line-height: 1.2rem;
+  clear: both;
+  display: block;
+  text-transform: uppercase;
+}
+
+#calculator-form .ui-slider-horizontal {
+  height: 30px;
+  border: none;
+  border-radius: 12px;
+  background: transparent url("../img/slider-gray.png") left center repeat-x;
+  margin: 2px 0;
+}
+
+#calculator-form .ui-slider-horizontal .ui-slider-handle {
+  margin-left: -12px;
+  top: 0;
+}
+
+#calculator-form .ui-state-default,
+#calculator-form .ui-widget-content .ui-state-default,
+#calculator-form .ui-widget-header .ui-state-default {
+  border: none;
+  background: transparent url("../img/slider-handle.png") center center repeat-x scroll;
+  font-weight: 400;
+}
+
+#calculator-form .ui-state-hover,
+#calculator-form .ui-widget-content .ui-state-hover,
+#calculator-form .ui-widget-header .ui-state-hover,
+#calculator-form .ui-state-focus,
+#calculator-form .ui-widget-content .ui-state-focus,
+#calculator-form .ui-widget-header .ui-state-focus {
+  border: none;
+  background: transparent url("../img/slider-handle.png") center center repeat-x scroll;
+  font-weight: 400;
+}
+
+#calculator-form .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 24px;
+  height: 30px;
+  cursor: default;
+}
+
+#calculator-form .ui-widget-header {
+  background: transparent url("../img/slider-green.png") left center repeat-x;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+#calculator-form #fuel-type {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 5px solid #f6f7fb;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+#calculator-form #fuel-type li {
+  display: block;
+  float: left;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  width: 50%;
+}
+
+#calculator-form #fuel-type label {
+  padding: 10px 5px 10px 30px;
+  margin: 0;
+  background-color: transparent;
+  display: block;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#calculator-form #fuel-type label[for='CNG'] {
+  background: transparent url("../img/sprite.png") no-repeat scroll 55px 13px;
+}
+
+#calculator-form #fuel-type label[for='LNG'] {
+  background: transparent url("../img/sprite.png") no-repeat scroll 55px -68px;
+}
+
+#calculator-form #fuel-type label.checked {
+  background-color: #7dc742;
+  color: #fff;
+}
+
+#calculator-form #fuel-type input {
+  display: none;
+}
+
+#calculator-form #measurement {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#calculator-form #measurement li {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#calculator-form #measurement label {
+  background: transparent url("../img/sprite.png") no-repeat scroll 0px -193px;
+  padding: 0px 10px 0px 20px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+#calculator-form #measurement label.checked {
+  background: transparent url("../img/sprite.png") no-repeat scroll 0px -167px;
+  color: #f6f7fb;
+}
+
+#calculator-form #measurement label.disabled {
+  background: #026ff7;
+  color: #1c8dff;
+}
+
+#calculator-form #measurement input {
+  display: none;
+}
+
+#calculator-form .totals label,
+#calculator-form .sliders label {
+  font-weight: 600;
+  padding: 10px 0 8px;
+  clear: both;
+  display: block;
+}
+
+#calculator-form .totals .ui-slider,
+#calculator-form .sliders .ui-slider {
+  position: relative;
+  display: block;
+}
+
+#calculator-form .totals input,
+#calculator-form .sliders input {
+  display: block;
+  background: transparent;
+  margin: 0 0 10px;
+  border: 2px solid #0060d7;
+  text-align: right;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  height: auto;
+  padding: 3px 10px;
+}
+
+#calculator-form .totals .wrapper {
+  display: block;
+  height: 35px;
+  padding-left: 25px;
+}
+
+#calculator-form .totals .wrapper.diesel-consumed {
+  background: transparent url("../img/sprite.png") no-repeat scroll 0px -245px;
+}
+
+#calculator-form .totals .wrapper.diesel-cost-total, #calculator-form .totals .wrapper.cne-cost-total {
+  background: transparent url("../img/sprite.png") no-repeat scroll 0px -295px;
+}
+
+#calculator-form .totals input {
+  width: 100%;
+}
+
+#calculator-form .totals input#savings {
+  background: #7dc742;
+  border: 1px solid #7dc742;
+  text-shadow: 2px 2px 1px #72af36;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  width: 100%;
+}
